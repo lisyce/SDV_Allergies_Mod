@@ -1,0 +1,48 @@
+{
+  "Format": "1.0.0",
+  "CustomAllergens": {
+    "frog": {
+      "Name": "Frogs"
+    }
+  },
+  "AllergenAssignments": {
+    "egg": {
+      "ObjectIds": [
+        "FlashShifter.StardewValleyExpandedCP_Flower_Cookie",
+        "FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi"
+      ]
+    },
+    "wheat": {
+      "ObjectIds": [
+        "FlashShifter.StardewValleyExpandedCP_Baked_Berry_Oatmeal",
+        "FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger",
+        "FlashShifter.StardewValleyExpandedCP_Flower_Cookie",
+        "FlashShifter.StardewValleyExpandedCP_Frog_Legs",
+        "FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish",
+        "FlashShifter.StardewValleyExpandedCP_Mixed_Berry_Pie"
+      ]
+    },
+    "fish": {
+      "ObjectIds": [
+        "FlashShifter.StardewValleyExpandedCP_Big_Bark_Burger",
+        "FlashShifter.StardewValleyExpandedCP_Glazed_Butterfish",
+        "FlashShifter.StardewValleyExpandedCP_Void_Delight",
+        "FlashShifter.StardewValleyExpandedCP_Void_Salmon_Sushi"
+      ]
+    },
+    "shellfish": {
+      "ObjectIds": [
+        "FlashShifter.StardewValleyExpandedCP_Starfish"
+      ]
+    },
+    "frog": {
+      "ObjectIds": [
+        "FlashShifter.StardewValleyExpandedCP_Frog",
+        "FlashShifter.StardewValleyExpandedCP_Frog_Legs"
+      ]
+    }
+  },
+  "ExcludeFromFish": [
+    "FlashShifter.StardewValleyExpandedCP_Frog"
+  ]
+}

@@ -95,8 +95,34 @@ Use `"ContextTags"` (A list of string context tags) to give any objects with tho
 
 This can save typing if there are lots of items that share a context tag that you would like to all have the same allergen.
 
+### ExcludeFromFish
+
+Use this to specify a set of item IDs that you want to exclude from the fish allergen even if they have category `-4` (see section below this one). The JSON example below adds a frog allergy (for some modded frog object that is categorized as fish internally). The frog object will NOT have the fish allergy, but it WILL have the custom frog allergy.
+
+```json
+{
+  "Format": "1.0.0",
+  "CustomAllergens": {
+    "frog": {
+      "Name": "Frogs"
+    }
+  },
+  "AllergenAssignments": {
+    "frog": {
+      "ObjectIds": [
+        "MyMod.Frog"
+      ]
+    }
+  },
+  "ExcludeFromFish": [
+    "MyMod.Frog"
+  ]
+}
+```
+
 #### Automatically-added allergens
 
 - Any object with the tags `egg_item`, `mayo_item`, or `large_egg_item` contains the egg allergen
 - Any object with the tags `milk_item`, `large_milk_item`, `cow_milk_item`, or `goat_milk_item` contains the dairy allergen
 - The base mod contains both fish and shellfish allergens, but the game code describes all of these items under the same fish category. Any custom modded objects under the fish category (`-4`) will be automatically marked as having the fish allergy as long as it was NOT registered under the shellfish allergen as well. Even if your modded shellfish is not edible as-is (like the vanilla crab pot fish), you should still register it under the shellfish allergen so that processed goods from that shellfish are also registered under the shellfish alleregen.
+  - If you exclude an item from the fish category with `ExcludeFromFish` if you don't want it to have the fish allergen OR the shellfish allergen

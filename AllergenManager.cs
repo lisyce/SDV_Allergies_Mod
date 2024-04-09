@@ -164,31 +164,16 @@ namespace BZP_Allergies
         private static ISet<string> GetFishItems (IAssetDataForDictionary<string, ObjectData> data)
         {
             ISet<string> result = new HashSet<string>();
+            ISet<string> shellfish = ALLERGEN_OBJECTS.GetValueOrDefault("shellfish", new HashSet<string>());
 
             foreach (var item in data.Data)
             {
                 ObjectData v = item.Value;
-                if (v.Category == StardewValley.Object.FishCategory)
+                string id = v.QualifiedItemId;
+                if (v.Category == StardewValley.Object.FishCategory && !shellfish.Contains(id) && !EXCLUDE_FROM_FISH.Contains(id))
                 {
                     result.Add(item.Key);
                 }
-            }
-
-            // remove shellfish
-            ISet<string> shellfish = ALLERGEN_OBJECTS.GetValueOrDefault("shellfish", new HashSet<string>());
-            
-            foreach (var item in data.Data)
-            {
-                List<string> tags = item.Value.ContextTags ?? new();
-                if (shellfish.Contains(item.Key) || tags.Contains(GetAllergenContextTag("shellfish")))
-                {
-                    result.Remove(item.Key);
-                }
-            }
-
-            // remove exclude from fish items
-            foreach (string exclude in EXCLUDE_FROM_FISH) {
-                result.Remove(exclude);
             }
 
             return result;

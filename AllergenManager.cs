@@ -24,6 +24,8 @@ namespace BZP_Allergies
 
         public static Dictionary<string, string> ALLERGEN_CONTENT_PACK;
 
+        public static ISet<string> EXCLUDE_FROM_FISH;
+
         public static void InitDefaultDicts()
         {
             ALLERGEN_OBJECTS = new()
@@ -71,6 +73,8 @@ namespace BZP_Allergies
             };
 
             ALLERGEN_CONTENT_PACK = new();
+
+            EXCLUDE_FROM_FISH = new();
         }
 
         public static string GetAllergenContextTag(string allergen)
@@ -180,6 +184,11 @@ namespace BZP_Allergies
                 {
                     result.Remove(item.Key);
                 }
+            }
+
+            // remove exclude from fish items
+            foreach (string exclude in EXCLUDE_FROM_FISH) {
+                result.Remove(exclude);
             }
 
             return result;

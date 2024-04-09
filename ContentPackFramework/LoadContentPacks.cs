@@ -93,6 +93,11 @@ namespace BZP_Allergies.ContentPackFramework
                 }
             }
 
+            // Exclude from Fish
+            foreach (string exclude in content.ExcludeFromFish) {
+                AllergenManager.EXCLUDE_FROM_FISH.Add(exclude);
+            }
+
             return true;  // no errors :)
         }
     }

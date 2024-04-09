@@ -7,6 +7,7 @@ namespace BZP_Allergies.ContentPackFramework
         public string? Format { get; set; }
         public Dictionary<string, CustomAllergen> CustomAllergens { get; set; } = new();
         public Dictionary<string, AllergenAssignments> AllergenAssignments { get; set; } = new();
+        public List<string> ExcludeFromFish { get; set; } = new();
     }
 
     internal class CustomAllergen

@@ -1,0 +1,53 @@
+{
+  "Format": "2.0.0",
+  "Changes": [
+    {
+      "LogName": "Claire Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Claire",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "Um... Are you ok?$s"
+      }
+    },
+    {
+      "LogName": "Lance Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lance",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "You should be careful when experimenting with new foods!"
+      }
+    },
+    {
+      "LogName": "Olivia Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Olivia",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "Sweetie, you look dreadful!$7"
+      }
+    },
+    {
+      "LogName": "Sophia Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sophia",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "O-oh. Did something make you sick?$5"
+      }
+    },
+    {
+      "LogName": "Victor Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Victor",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "Uhh... You might want to get that checked out.$7"
+      }
+    },
+    {
+      "LogName": "Andy Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Andy",
+      "Entries": {
+        "BarleyZP.BzpAllergies_farmer_allergic_reaction": "You're lookin' like a wreck right now."
+      }
+    },
+  ]
+}

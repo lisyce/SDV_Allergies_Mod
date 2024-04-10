@@ -1,0 +1,18 @@
+{
+  "Name": "[CP] SDVE Allergies",
+  "Author": "BarleyZP",
+  "Version": "1.0.0",
+  "Description": "Brings BarleyZP's Allergies to SDVE",
+  "UniqueID": "BarleyZP.BzpAllergiesSDVE.CP",
+  "MinimumApiVersion": "3.8.0",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": true
+    }
+  ]
+}
